@@ -1,0 +1,7 @@
+/.project
+*~
+*.bak
+*.swp
+_obj
+_*
+bin/
