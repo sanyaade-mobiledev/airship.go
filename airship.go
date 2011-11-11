@@ -14,21 +14,26 @@ import (
 	"io"
 	"io/ioutil"
 	"json"
-	"log"
 	"os"
 )
 
 var UAClient = &http.Client{}
 
-// PushData is a struct that represents a payload.
+// APS represents an iOS payload - alert, sound, badge.
 type APS struct {
 	Alert string `json:"alert,omitempty"`
 	Sound string `json:"sound,omitempty"`
 	Badge int `json:"badge,omitempty"`
 }
 
+type Android struct {
+	Alert string `json:"alert,omitempty"`
+}
+
+// PushData is a struct that represents a payload.
 type PushData struct {
 	APS APS `json:"aps,omitempty"`
+	Android Android `json:"android,omitempty"`
 	DeviceTokens []string `json:"device_tokens,omitempty"`
 	Tags []string `json:"tags,omitempty"`
 	Aliases []string `json:"aliases,omitempty"`
