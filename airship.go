@@ -35,6 +35,7 @@ type PushData struct {
 	APS APS `json:"aps,omitempty"`
 	Android Android `json:"android,omitempty"`
 	DeviceTokens []string `json:"device_tokens,omitempty"`
+	Apids []string `json:"apids,omitempty"`
 	Tags []string `json:"tags,omitempty"`
 	Aliases []string `json:"aliases,omitempty"`
 }
